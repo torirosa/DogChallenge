@@ -18,7 +18,7 @@ struct ContentListView<Data, Content>: View where Data: RandomAccessCollection, 
 	}
 
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
 			LazyVStack(spacing: 0) {
 				ForEach(data, id: \.self) { item in
 					content(item)
