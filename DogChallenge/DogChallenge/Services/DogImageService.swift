@@ -8,6 +8,8 @@
 import Foundation
 
 class DogImageService: DogServicing {
+	// MARK: - Properties
+
 	private let breed: String
 	private var endpoint: String {
  		"breed/\(breed)/images"
@@ -16,9 +18,13 @@ class DogImageService: DogServicing {
 		Constants.baseUrl.rawValue + endpoint
 	}
 
+	// MARK: - initializers
+
 	init(breed: String) {
 		self.breed = breed
 	}
+
+	// MARK: - Methods
 
 	func urlRequest() -> URLRequest? {
 		let allHttpHeaderFields: [String: String] = [:]

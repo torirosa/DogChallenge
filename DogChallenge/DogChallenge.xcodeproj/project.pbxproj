@@ -139,10 +139,10 @@
 			isa = PBXGroup;
 			children = (
 				3B0D1194298CED9600E7B934 /* Constants */,
-				3B0D1182298C956200E7B934 /* Views */,
-				3B0D117B298C931400E7B934 /* ViewModels */,
 				3B0D1178298C928C00E7B934 /* Model */,
 				3B0D116F298C8D4C00E7B934 /* Services */,
+				3B0D1182298C956200E7B934 /* Views */,
+				3B0D117B298C931400E7B934 /* ViewModels */,
 				3B0D1145298C8D0100E7B934 /* DogChallengeApp.swift */,
 				3B0D1149298C8D0700E7B934 /* Assets.xcassets */,
 				3B0D114B298C8D0700E7B934 /* Preview Content */,

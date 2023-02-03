@@ -8,6 +8,8 @@
 import Foundation
 
 struct NetworkService: NetworkServicing {
+	// MARK: - Methods
+
 	func request<DataType: Decodable>(urlRequest: URLRequest?) async throws -> DataType {
 		guard let urlRequest = urlRequest else {
 			throw NetworkError.invalidRequest
@@ -22,12 +24,6 @@ struct NetworkService: NetworkServicing {
 		if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
 			// try to read out a string array
 			print("json: \(json)")
-		}
-
-		do {
-			try JSONDecoder().decode(DataType.self, from: data)
-		} catch {
-			print("error: \(error)")
 		}
 
 		return try JSONDecoder().decode(DataType.self, from: data)

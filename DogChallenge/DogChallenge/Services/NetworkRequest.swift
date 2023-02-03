@@ -8,6 +8,8 @@
 import Foundation
 
 struct NetworkRequest {
+	// MARK: - Properties
+
 	var params: NetworkParameters
 
 	var url: URL? {
