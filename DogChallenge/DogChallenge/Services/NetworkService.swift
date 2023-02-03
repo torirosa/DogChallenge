@@ -21,11 +21,6 @@ struct NetworkService: NetworkServicing {
 			throw NetworkError.invalidResponse
 		}
 
-		if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-			// try to read out a string array
-			print("json: \(json)")
-		}
-
 		return try JSONDecoder().decode(DataType.self, from: data)
 	}
 }
