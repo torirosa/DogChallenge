@@ -11,12 +11,19 @@ class DogListViewModel: ContentViewModeling {
 	// MARK: - Published Objects
 
 	@Published var error: Error?
-	@Published var showAlert = false
 	@Published var items: [String] = []
+	@Published var isLoading = false
+	@Published var showAlert = false
 
 	// MARK: - Properties
 
-	var service: NetworkServicing = NetworkService()
+	var service: NetworkServicing
+
+	// MARK: - Intializer
+	
+	init(service: NetworkServicing = NetworkService()) {
+		self.service = service
+	}
 
 	// MARK: - Private Methods
 
@@ -29,11 +36,17 @@ class DogListViewModel: ContentViewModeling {
 		self.items = Array(list.message.filter {
 			$0.value.count > 0
 		}.keys).sorted(by: <)
+		isLoading = false
 	}
 
 	// MARK: - Methods
 
+	@MainActor
 	func fetchData(item: String?) {
+		guard items.isEmpty else { return }
+
+		isLoading = true
+
 		Task {
 			do {
 				let service = DogListService()
@@ -41,6 +54,7 @@ class DogListViewModel: ContentViewModeling {
 			} catch {
 				showAlert = true
 				self.error = error
+				isLoading = false
 			}
 		}
 	}

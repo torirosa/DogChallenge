@@ -11,12 +11,19 @@ class DogImageImageModel: ContentViewModeling {
 	// MARK: - Published Objects
 
 	@Published var error: Error?
+	@Published var isLoading = false
 	@Published var items: [String] = []
 	@Published var showAlert = false
 
 	// MARK: - Properties
 
-	var service: NetworkServicing = NetworkService()
+	var service: NetworkServicing
+
+	// MARK: - Intializer
+
+	init(service: NetworkServicing = NetworkService()) {
+		self.service = service
+	}
 
 	// MARK: - Private Methods
 
@@ -27,21 +34,23 @@ class DogImageImageModel: ContentViewModeling {
 		let list: DogImages = try await self.service.request(urlRequest: urlRequest)
 
 		self.items = list.items
+		isLoading = false
 	}
 
 	// MARK: - Methods
 
+	@MainActor
 	func fetchData(item: String?) {
-		guard let item = item else { return }
+		guard items.isEmpty, let item = item else { return }
+
+		isLoading = true
 
 		Task {
-			guard items.isEmpty else { return }
-
 			do {
 				let service = DogImageService(breed: item)
 				try await request(service: service)
 			} catch {
-				print("Error: \(error)")
+				isLoading = false
 			}
 		}
 	}

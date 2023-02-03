@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol ContentViewModeling: ObservableObject {
 	var error: Error? { get set }
+	var isLoading: Bool { get set }
 	var items: [String] { get set }
 	var service: NetworkServicing { get set }
 	var showAlert: Bool { get set }
