@@ -25,7 +25,6 @@
 		3B0D1186298C99F500E7B934 /* DogBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D1185298C99F500E7B934 /* DogBreedView.swift */; };
 		3B0D118B298CEBF200E7B934 /* DogImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D118A298CEBF200E7B934 /* DogImageView.swift */; };
 		3B0D118D298CEC7000E7B934 /* DogImageImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D118C298CEC7000E7B934 /* DogImageImageModel.swift */; };
-		3B0D118F298CECA500E7B934 /* Dogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D118E298CECA500E7B934 /* Dogs.swift */; };
 		3B0D1191298CECF600E7B934 /* DogImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D1190298CECF600E7B934 /* DogImages.swift */; };
 		3B0D1193298CED3100E7B934 /* DogImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D1192298CED3100E7B934 /* DogImageService.swift */; };
 		3B0D1196298CEDA300E7B934 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D1195298CEDA300E7B934 /* Constants.swift */; };
@@ -77,7 +76,6 @@
 		3B0D1185298C99F500E7B934 /* DogBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedView.swift; sourceTree = "<group>"; };
 		3B0D118A298CEBF200E7B934 /* DogImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageView.swift; sourceTree = "<group>"; };
 		3B0D118C298CEC7000E7B934 /* DogImageImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageImageModel.swift; sourceTree = "<group>"; };
-		3B0D118E298CECA500E7B934 /* Dogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dogs.swift; sourceTree = "<group>"; };
 		3B0D1190298CECF600E7B934 /* DogImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImages.swift; sourceTree = "<group>"; };
 		3B0D1192298CED3100E7B934 /* DogImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageService.swift; sourceTree = "<group>"; };
 		3B0D1195298CEDA300E7B934 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				3B0D1179298C92B600E7B934 /* DogList.swift */,
-				3B0D118E298CECA500E7B934 /* Dogs.swift */,
 				3B0D1190298CECF600E7B934 /* DogImages.swift */,
 			);
 			path = Model;
@@ -413,7 +410,6 @@
 				3B0D117F298C93EF00E7B934 /* NetworkService.swift in Sources */,
 				3B0D119E298CF25200E7B934 /* ContentViewModeling.swift in Sources */,
 				3B0D1199298CF19600E7B934 /* DogBreedViewTextModifier.swift in Sources */,
-				3B0D118F298CECA500E7B934 /* Dogs.swift in Sources */,
 				3B0D1181298C943C00E7B934 /* NetworkError.swift in Sources */,
 				3B0D1196298CEDA300E7B934 /* Constants.swift in Sources */,
 			);
